@@ -1,0 +1,4 @@
+theme = "PaperMod"
+baseURL = "https://thisisyello.github.io/"
+languageCode = "ko-kr"
+title = "thisisyello"
