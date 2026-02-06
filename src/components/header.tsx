@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 export default function Header() {
-    const { theme, setTheme } = useTheme();
+    const { theme, setTheme, resolvedTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
     const pathname = usePathname();
     const router = useRouter();
@@ -88,12 +88,14 @@ export default function Header() {
                     {mounted && (
                         <button
                             onClick={() =>
-                                setTheme(theme === "dark" ? "light" : "dark")
+                                setTheme(
+                                    resolvedTheme === "dark" ? "light" : "dark",
+                                )
                             }
                             className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
                             aria-label="Toggle Dark Mode"
                         >
-                            {theme === "dark" ? (
+                            {resolvedTheme === "dark" ? (
                                 <MdOutlineLightMode size="24" />
                             ) : (
                                 <MdOutlineDarkMode size="24" />
