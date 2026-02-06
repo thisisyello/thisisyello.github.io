@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# thisisyello Portfolio
 
-## Getting Started
+프론트엔드 엔지니어 **Yello**의 포트폴리오 웹사이트입니다.
+Next.js 15+, TailwindCSS, TypeScript를 기반으로 제작되었습니다.
 
-First, run the development server:
+## 🛠️ 기술 스택 (Tech Stack)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Deployment**: GitHub Pages (예정)
+
+## 📚 주요 라이브러리 (Key Libraries)
+
+이 프로젝트에서 사용된 주요 라이브러리와 사용 목적입니다.
+
+### 1. 콘텐츠 및 블로그 (Blog System)
+
+- **[`react-markdown`](https://github.com/remarkjs/react-markdown)**:
+    - Markdown 텍스트를 React 컴포넌트(HTML)로 변환하여 렌더링하기 위해 사용합니다.
+    - 블로그 포스트 본문을 보여주는 핵심 라이브러리입니다.
+- **[`gray-matter`](https://github.com/jonschlinkert/gray-matter)**:
+    - Markdown 파일 상단에 있는 메타 데이터(Frontmatter: 제목, 날짜, 태그 등)를 파싱하기 위해 사용합니다.
+    - `---`로 감싸진 영역을 읽어 객체 형태로 변환해줍니다.
+- **[`@tailwindcss/typography`](https://github.com/tailwindlabs/tailwindcss-typography)**:
+    - Markdown으로 렌더링된 HTML 요소들에 예쁜 기본 스타일을 자동으로 적용해줍니다. (`prose` 클래스 사용)
+
+### 2. UI 및 테마 (UI & Theming)
+
+- **[`next-themes`](https://github.com/pacocoursey/next-themes)**:
+    - 다크 모드와 라이트 모드 전환을 쉽게 관리하기 위해 사용합니다.
+    - 새로고침 시 화면이 깜빡이는 현상(FOUC)을 방지해줍니다.
+- **[`react-icons`](https://react-icons.github.io/react-icons/)**:
+    - 다양한 아이콘(Material Design, FontAwesome 등)을 React 컴포넌트 형태로 쉽게 가져와 사용합니다.
+
+## 📂 프로젝트 구조 (Structure)
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+src/
+├── app/              # Next.js App Router 페이지
+├── components/       # 재사용 가능한 UI 컴포넌트
+│   ├── main/         # 메인 페이지 섹션별 컴포넌트
+│   └── ...
+├── data/             # 정적 데이터 (스킬 목록 등)
+├── lib/              # 유틸리티 함수 (블로그 포스트 로딩 로직 등)
+└── posts/            # 블로그 Markdown 파일 (.md)
+```
