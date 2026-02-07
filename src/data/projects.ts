@@ -7,6 +7,7 @@ export interface Project {
     link?: string;
     github?: string;
     imageUrl?: string;
+    pdfUrl?: string;
     date: string;
 }
 
@@ -20,10 +21,21 @@ export const projects: Project[] = [
         techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
         link: "https://star-ter.shop/",
         github: "https://github.com/star-ter/star-ter",
+        pdfUrl: "/Alley_portfolio.pdf",
         date: "2025.12 ~ 2026.01",
     },
     {
         id: "2",
+        title: "Pay Mini Checkout",
+        description: "결제 금액 검증, 서버 승인, 상태 관리까지 토스 페이먼츠 연동 결제 시스템 PG 연동 플로우를 학습하며 구현한 미니 프로젝트",
+        category: "Web",
+        techStack: ["Next.js", "PostgreSQL(Neon)", "Prisma ORM", "Tailwind CSS", "TypeScript"],
+        github: "https://github.com/thisisyello/pay-mini-checkout",
+        link: "https://pay-mini-checkout.vercel.app/",
+        date: "2026.01",
+    },
+    {
+        id: "3",
         title: "k!mjuhyeon by 覺",
         description:
             "자사 브랜드의 온라인 판매 채널 구축과 브랜드 철학과 비스포크 테일러링의 가치를 효과적으로 전달하는 쇼핑몰 웹사이트를 기획·구현",
@@ -31,15 +43,17 @@ export const projects: Project[] = [
         techStack: ["HTML", "CSS", "JavaScript", "카페24"],
         github: "",
         link: "https://bykak.com/",
+        pdfUrl: "/Designer_portfolio.pdf",
         date: "2024.01 ~ 2024.02",
     },
     {
-        id: "",
-        title: "프로젝트 추가 예정..",
-        description: "",
-        category: "Web",
+        id: "4",
+        title: "준비중",
+        description:"-",
+        category: "ready",
         techStack: [""],
         github: "",
+        link: "",
         date: "",
     },
 ];
