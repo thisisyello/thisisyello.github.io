@@ -2,6 +2,7 @@
 
 import { projects } from "@/data/projects";
 import Card from "@/components/ui/card";
+import { FaExternalLinkAlt, FaFilePdf, FaGithub } from "react-icons/fa";
 
 export default function ProjectPage() {
     return (
@@ -52,8 +53,9 @@ export default function ProjectPage() {
                                     href={project.github}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 text-sm font-medium hover:border-primary hover:text-primary transition-colors"
+                                    className="px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 text-sm font-medium hover:border-primary hover:text-primary transition-colors inline-flex items-center gap-2"
                                 >
+                                    <FaGithub className="text-sm" />
                                     GitHub
                                 </a>
                             )}
@@ -62,8 +64,9 @@ export default function ProjectPage() {
                                     href={project.link}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 text-sm font-medium hover:border-primary hover:text-primary transition-colors"
+                                    className="px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 text-sm font-medium hover:border-primary hover:text-primary transition-colors inline-flex items-center gap-2"
                                 >
+                                    <FaExternalLinkAlt className="text-sm" />
                                     사이트
                                 </a>
                             )}
@@ -72,8 +75,9 @@ export default function ProjectPage() {
                                     href={project.pdfUrl}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 text-sm font-medium hover:border-primary hover:text-primary transition-colors"
+                                    className="px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 text-sm font-medium hover:border-primary hover:text-primary transition-colors inline-flex items-center gap-2"
                                 >
+                                    <FaFilePdf className="text-sm" />
                                     자세히보기
                                 </a>
                             )}

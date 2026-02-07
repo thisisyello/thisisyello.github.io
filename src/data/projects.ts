@@ -46,14 +46,4 @@ export const projects: Project[] = [
         pdfUrl: "/Designer_portfolio.pdf",
         date: "2024.01 ~ 2024.02",
     },
-    {
-        id: "4",
-        title: "준비중",
-        description:"-",
-        category: "ready",
-        techStack: [""],
-        github: "",
-        link: "",
-        date: "",
-    },
 ];
