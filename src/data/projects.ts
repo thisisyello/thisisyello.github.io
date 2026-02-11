@@ -32,7 +32,7 @@ export const projects: Project[] = [
         techStack: ["Next.js", "PostgreSQL(Neon)", "Prisma ORM", "Tailwind CSS", "TypeScript"],
         github: "https://github.com/thisisyello/pay-mini-checkout",
         link: "https://pay-mini-checkout.vercel.app/",
-        date: "2026.01",
+        date: "2026.02",
     },
     {
         id: "3",
