@@ -31,6 +31,6 @@ export const frontendSkills: Skill[] = [
 export const backendSkills: Skill[] = [
     { name: "Node.js (NestJS)", icon: SiNestjs },
     { name: "Python (FastAPI)", icon: SiFastapi },
-    { name: "Prisma", icon: SiPrisma },
-    { name: "PostgreSQL", icon: SiPostgresql },
+    // { name: "Prisma", icon: SiPrisma },
+    // { name: "PostgreSQL", icon: SiPostgresql },
 ];
