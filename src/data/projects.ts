@@ -19,7 +19,7 @@ export const projects: Project[] = [
             "서울시 상권 데이터 기반 AI 챗봇과 지도 시각화를 통해 매출·생존율·손익분기점 분석을 제공하는 창업 입지 분석 서비스",
         category: "Web",
         techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-        link: "https://star-ter.shop/",
+        // link: "https://star-ter.shop/",
         github: "https://github.com/star-ter/star-ter",
         pdfUrl: "/Alley_portfolio.pdf",
         date: "2025.12 ~ 2026.01",

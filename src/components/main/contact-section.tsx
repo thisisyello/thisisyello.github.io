@@ -2,7 +2,7 @@ export default function ContactSection() {
     return (
         <section
             id="contact"
-            className="w-full max-w-[1200px] min-h-screen py-20 px-4 flex flex-col justify-center gap-10"
+            className="w-full max-w-300 min-h-screen py-20 px-4 flex flex-col justify-center gap-10"
         >
             <h2 className="text-4xl font-bold text-primary">Contact</h2>
             <div className="flex flex-col md:flex-row gap-8">
