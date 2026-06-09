@@ -96,9 +96,9 @@ export default function Header() {
                             aria-label="Toggle Dark Mode"
                         >
                             {resolvedTheme === "dark" ? (
-                                <MdOutlineDarkMode size="24" />
-                            ) : (
                                 <MdOutlineLightMode size="24" />
+                            ) : (
+                                <MdOutlineDarkMode size="24" />
                             )}
                         </button>
                     )}
