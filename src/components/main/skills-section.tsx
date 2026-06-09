@@ -13,7 +13,7 @@ export default function SkillsSection() {
 
             <div className="flex flex-col gap-16">
                 <div>
-                    <h3 className="text-xl font-bold mb-6">Front-end</h3>
+                    <h3 className="text-xl font-bold mb-6">주요 기술</h3>
                     <div className="flex flex-wrap gap-4">
                         {frontendSkills.map((skill) => (
                             <Card
@@ -31,7 +31,7 @@ export default function SkillsSection() {
                 </div>
 
                 <div>
-                    <h3 className="text-xl font-bold mb-6">Back-end</h3>
+                    <h3 className="text-xl font-bold mb-6">경험 기술</h3>
                     <div className="flex flex-wrap gap-4">
                         {backendSkills.map((skill) => (
                             <Card
@@ -45,15 +45,6 @@ export default function SkillsSection() {
                                 </span>
                             </Card>
                         ))}
-                        {/* REST API Mock Chip */}
-                        <Card
-                            hoverable
-                            className="flex items-center gap-3 px-6 py-4"
-                        >
-                            <span className="text-lg text-text-muted font-medium">
-                                REST API
-                            </span>
-                        </Card>
                     </div>
                 </div>
             </div>

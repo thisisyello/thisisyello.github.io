@@ -8,10 +8,10 @@ export default function ContactSection() {
             <div className="flex flex-col md:flex-row gap-8">
                 <div className="flex-1 space-y-4">
                     <p className="text-2xl font-medium">
-                        Let&apos;s work together.
+                        <span className="text-primary">이태우</span>였습니다. 감사합니다.
                     </p>
                     <p className="text-base text-text-muted">
-                        새로운 기회와 협업을 언제나 환영합니다.
+                        새로운 기회는 언제나 환영합니다.
                         <br />
                         이메일로 연락주시면 빠르게 회신 드리겠습니다.
                     </p>

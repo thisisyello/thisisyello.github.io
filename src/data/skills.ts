@@ -12,6 +12,7 @@ import {
     SiPrisma,
     SiPostgresql,
 } from "react-icons/si";
+import { TbApi } from "react-icons/tb";
 
 export interface Skill {
     name: string;
@@ -19,18 +20,19 @@ export interface Skill {
 }
 
 export const frontendSkills: Skill[] = [
-    { name: "HTML", icon: SiHtml5 },
-    { name: "CSS", icon: SiCss3 },
-    { name: "JavaScript", icon: SiJavascript },
     { name: "TypeScript", icon: SiTypescript },
     { name: "React", icon: SiReact },
     { name: "Next.js", icon: SiNextdotjs },
     { name: "TailwindCSS", icon: SiTailwindcss },
+    { name: "HTML", icon: SiHtml5 },
+    { name: "CSS", icon: SiCss3 },
+    { name: "JavaScript", icon: SiJavascript },
 ];
 
 export const backendSkills: Skill[] = [
+    { name: "REST API", icon: TbApi },
     { name: "Node.js (NestJS)", icon: SiNestjs },
+    { name: "Prisma", icon: SiPrisma },
+    { name: "PostgreSQL", icon: SiPostgresql },
     { name: "Python (FastAPI)", icon: SiFastapi },
-    // { name: "Prisma", icon: SiPrisma },
-    // { name: "PostgreSQL", icon: SiPostgresql },
 ];

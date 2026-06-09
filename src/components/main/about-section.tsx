@@ -13,17 +13,14 @@ export default function AboutSection() {
                     입니다.
                 </h1>
                 <p className="text-2xl font-medium text-text-muted mb-8">
-                    Front-end Product Engineer
+                    Front-end Developer
                 </p>
                 <p className="text-xl text-text-muted leading-relaxed">
-                    사용자에게 전달되는 화면을 중심으로 복잡한 정보를 직관적인
-                    UI로 풀어내는 프론트엔드 개발자입니다.
+                    Next.js와 TypeScript 기반으로 사용자 흐름을 고려한 UI를 설계하고 구현하는 프론트엔드 개발자입니다.
                     <br />
-                    데이터와 상태 변화에 따라 동작하는 화면을 구현하며 사용성
-                    문제를 개선해왔습니다.
+                    지도 시각화, 데이터 차트, 결제 플로우처럼 상태 변화가 화면 경험에 영향을 주는 기능을 구현하며,
                     <br />
-                    프로젝트 과정에서 발생한 오류와 불편 사항을 분석하고 UI
-                    구조를 반복적으로 개선했습니다.
+                    예측 가능한 상태 관리와 명확한 인터랙션 설계를 중요하게 생각합니다.
                 </p>
 
                 <div className="pt-8 flex justify-start gap-8">
