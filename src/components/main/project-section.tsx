@@ -9,7 +9,7 @@ export default function ProjectSection() {
     return (
         <section
             id="project"
-            className="w-full max-w-[1200px] min-h-screen py-20 px-4 flex flex-col justify-center gap-10"
+            className="w-full max-w-300 min-h-screen py-20 px-4 flex flex-col justify-center gap-10"
         >
             <h2 className="text-4xl font-bold text-primary">Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
