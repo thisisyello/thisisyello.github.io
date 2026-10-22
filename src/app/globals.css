@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    background: #fff;
+    color: #111;
+    font-family: sans-serif;
+}
+
+main {
+    display: grid;
+    min-height: 100svh;
+    place-items: center;
+}
