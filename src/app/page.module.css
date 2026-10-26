@@ -1,0 +1,25 @@
+.layout {
+    display: grid;
+    grid-template-columns: 230px minmax(0, 1fr);
+    gap: 72px;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 44px;
+}
+
+.main {
+    display: grid;
+    min-height: 100svh;
+    place-items: center;
+}
+
+@media (max-width: 700px) {
+    .layout {
+        display: block;
+        padding: 0 22px;
+    }
+
+    .main {
+        min-height: 50svh;
+    }
+}
