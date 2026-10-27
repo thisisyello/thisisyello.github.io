@@ -25,7 +25,6 @@ export default function Sidebar() {
       frameId = null;
       if (sections.length === 0) return;
 
-      // 화면 상단에 가까워진 섹션을 현재 위치로 표시합니다.
       const readingLine = Math.min(160, window.innerHeight * 0.25);
       let currentId = sections[0].id;
 
@@ -35,7 +34,6 @@ export default function Sidebar() {
         }
       }
 
-      // 마지막 섹션이 짧아 상단까지 스크롤되지 않는 경우도 처리합니다.
       const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
       if (window.scrollY > 0 && atBottom) {
         currentId = sections[sections.length - 1].id;
@@ -67,7 +65,7 @@ export default function Sidebar() {
     <aside className={styles.sidebar}>
       <a className={styles.identity} href="#about" aria-label="Yello 소개">
         <h1 className={styles.name}>
-          Yello
+          yello
           <span>생각을 화면으로 옮기는 사람</span>
         </h1>
       </a>
@@ -107,7 +105,7 @@ export default function Sidebar() {
           GitHub
           <span className="sr-only"> (새 탭에서 열기)</span>
         </a>
-        <small>© {new Date().getFullYear()} YELLO</small>
+        <small>© {new Date().getFullYear()} yello</small>
       </footer>
     </aside>
   );

@@ -14,7 +14,7 @@ const skillGroups = [
 export default function AboutSection() {
     return (
         <section className={styles.about} id="about" aria-labelledby="about-title">
-            <p className={styles.greeting}>안녕하세요, Yello입니다.</p>
+            <p className={styles.greeting}>안녕하세요, yello입니다.</p>
 
             <h2 className={styles.title} id="about-title">
                 사용자의 흐름을 이해하고,<br />

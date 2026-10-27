@@ -1,10 +1,15 @@
+import type { StaticImageData } from "next/image";
+import alleyImage from "@/components/projects/img/alley.png";
+import paymentImage from "@/components/projects/img/payment.png";
+import luckezImage from "@/components/projects/img/luckez.png";
+import brandImage from "@/components/projects/img/k!mjuhyeon.png";
+
 export interface ProjectCaseStudy {
     title: string;
     challenge?: string;
     approach: string;
 }
 
-// 개발 진행 상태와 사이트 운영 상태는 별개로 관리합니다.
 export type ProjectWebsite =
     | { status: "unknown" }
     | { status: "active"; url: string }
@@ -13,13 +18,13 @@ export type ProjectWebsite =
 export interface ProjectLink {
     type: "github" | "video";
     url: string;
-    // 예: "프론트엔드 코드", "백엔드 코드", "YouTube 소개 영상"
     label?: string;
 }
 
 export interface Project {
     id: string;
     title: string;
+    image?: { src: StaticImageData; alt: string };
     category: string;
     period: string;
     status?: "진행 중";
@@ -27,10 +32,8 @@ export interface Project {
     description: string;
     role: string;
     technologies: string[];
-    // 사이트가 종료되어도 GitHub와 소개 영상은 독립적으로 연결할 수 있습니다.
     website: ProjectWebsite;
     links: ProjectLink[];
-    // 상세 페이지가 만들어졌을 때만 경로를 지정합니다.
     detailPath?: string;
     caseStudies: ProjectCaseStudy[];
     retrospective?: {
@@ -40,15 +43,12 @@ export interface Project {
     };
 }
 
-// 출처: 루트의 「프론트엔드_포트폴리오.pdf」.
-// 문서에 명시된 담당 범위와 구현 내용만 정리합니다.
-// 외부 링크는 제공받은 주소를 사용하고, 사이트 주소가 없는 경우 운영 상태를 unknown으로 둡니다.
 export const projects: Project[] = [
-    // PDF 2–7쪽
     {
         id: "alley",
         detailPath: "/projects/alley",
         title: "ALLEY",
+        image: { src: alleyImage, alt: "ALLEY 상권 분석 서비스 메인 화면" },
         category: "크래프톤 정글 최종 프로젝트",
         period: "2025.12 ~ 2026.01",
         website: { status: "unknown" },
@@ -83,11 +83,11 @@ export const projects: Project[] = [
             nextSteps: "SSE 이벤트 처리를 별도 모듈로 분리하고, 점수 계산과 AI 응답 파서부터 테스트를 도입하고자 합니다.",
         },
     },
-    // PDF 8–13쪽
     {
         id: "mini-payment-demo",
         detailPath: "/projects/mini-payment-demo",
         title: "Mini Payment Demo",
+        image: { src: paymentImage, alt: "Mini Payment Demo 결제 수단 선택 화면" },
         category: "개인 미니 프로젝트",
         period: "2026.02",
         website: { status: "active", url: "https://pay-mini-checkout.vercel.app/" },
@@ -121,11 +121,11 @@ export const projects: Project[] = [
             nextSteps: "실패·취소 상태와 Webhook 처리 흐름을 보강해 서버 상태와 사용자 화면의 일관성을 높이고자 합니다.",
         },
     },
-    // PDF 14–15쪽
     {
         id: "luckez",
         detailPath: "/projects/luckez",
         title: "Luckez",
+        image: { src: luckezImage, alt: "Luckez 로또 번호 추첨 화면" },
         category: "개인 프로젝트",
         period: "2026.08 ~",
         status: "진행 중",
@@ -152,11 +152,11 @@ export const projects: Project[] = [
             },
         ],
     },
-    // PDF 16–20쪽
     {
         id: "kimjuhyeon-brand",
         detailPath: "/projects/kimjuhyeon-brand",
         title: "데시그너 k!mjuhyeon by 覺",
+        image: { src: brandImage, alt: "데시그너 k!mjuhyeon by 覺 브랜드 쇼핑몰 메인 화면" },
         category: "브랜드 쇼핑몰",
         period: "2024.01 ~ 2024.03",
         website: { status: "active", url: "https://bykak.com/" },

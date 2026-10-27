@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FiFileText, FiGlobe } from "react-icons/fi";
 import { FaGithub, FaYoutube } from "react-icons/fa";
 import { projects, type Project } from "@/data/projects";
@@ -9,9 +10,21 @@ function ProjectPreview({ project }: { project: Project }) {
 
     return (
         <div className={styles.preview}>
-            <div className={styles.previewVisual} aria-hidden="true">
-                <span className={styles.previewTitle}>{project.title}</span>
-                <span className={styles.previewLabel}>프로젝트 이미지 준비 중</span>
+            <div className={styles.previewVisual}>
+                {project.image ? (
+                    <Image
+                        className={styles.previewImage}
+                        src={project.image.src}
+                        alt={project.image.alt}
+                        fill
+                        sizes="(max-width: 1000px) 100vw, 385px"
+                    />
+                ) : (
+                    <>
+                        <span className={styles.previewTitle} aria-hidden="true">{project.title}</span>
+                        <span className={styles.previewLabel}>프로젝트 이미지 준비 중</span>
+                    </>
+                )}
             </div>
 
             {project.website.status === "closed" && (
