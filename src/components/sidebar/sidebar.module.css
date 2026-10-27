@@ -90,8 +90,8 @@
 .footer > a {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 86px;
+    gap: 8px;
+    width: fit-content;
     font-size: 12px;
 }
 
