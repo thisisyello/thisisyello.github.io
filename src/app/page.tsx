@@ -1,7 +1,12 @@
+import type { Metadata } from "next";
 import styles from "./page.module.css";
 import Sidebar from "@/components/sidebar/sidebar";
 import AboutSection from "@/components/about/about-section";
 import ProjectsSection from "@/components/projects/projects-section";
+
+export const metadata: Metadata = {
+    title: "thisisyello",
+};
 
 export default function Home() {
     return (

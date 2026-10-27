@@ -15,7 +15,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { id } = await params;
     const project = projects.find((item) => item.id === id);
-    return { title: project ? `${project.title} — Yello` : "프로젝트 — Yello" };
+    return { title: project ? `thisisyello - ${project.title}` : "thisisyello - 프로젝트" };
 }
 
 export default async function ProjectPage({ params }: Props) {
