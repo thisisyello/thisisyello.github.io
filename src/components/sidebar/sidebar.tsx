@@ -7,8 +7,6 @@ import styles from "./sidebar.module.css";
 const navigation = [
   { id: "about", label: "소개" },
   { id: "projects", label: "프로젝트" },
-  { id: "skills", label: "구현 역량" },
-  { id: "notes", label: "탐구 기록" },
   { id: "contact", label: "연락" },
 ];
 
