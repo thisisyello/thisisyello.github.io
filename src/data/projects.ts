@@ -129,7 +129,7 @@ export const projects: Project[] = [
         category: "개인 프로젝트",
         period: "2026.08 ~",
         status: "진행 중",
-        website: { status: "unknown" },
+        website: { status: "active", url: "https://luckez-lotto.vercel.app/" },
         links: [
             { type: "github", url: "https://github.com/thisisyello/luckez" },
         ],
