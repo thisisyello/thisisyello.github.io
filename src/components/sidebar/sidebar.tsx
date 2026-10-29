@@ -64,7 +64,7 @@ export default function Sidebar() {
       <a className={styles.identity} href="#about" aria-label="Yello 소개">
         <h1 className={styles.name}>
           yello
-          <span>생각을 화면으로 옮기는 사람</span>
+          <span>사용자의 흐름을 화면으로 구현하는 사람</span>
         </h1>
       </a>
 

@@ -11,10 +11,10 @@ export default function ContactSection() {
                 <span>Contact</span>
             </header>
 
-            <p className={styles.invitation}>함께 만들 다음 화면을 기다립니다.</p>
+            <p className={styles.invitation}>함께 만들 다음 화면을 기대합니다.</p>
             <p className={styles.description}>
-                채용과 협업에 관한 이야기를 환영합니다.<br />
-                작업과 코드에 대한 이야기도 편하게 나눠주세요.
+                채용과 협업에 관한 이야기를 편하게 나눠주세요.<br />
+                퍼블리싱, 프론트엔드 구현에 대한 이야기도 환영합니다.
             </p>
 
             <div className={styles.links}>
