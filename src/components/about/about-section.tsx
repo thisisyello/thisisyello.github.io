@@ -16,10 +16,10 @@ export default function AboutSection() {
         <section className={styles.about} id="about" aria-labelledby="about-title">
             <p className={styles.greeting}>안녕하세요, yello입니다.</p>
 
-            <h2 className={styles.title} id="about-title">
+            <h1 className={styles.title} id="about-title">
                 사용자의 흐름을 이해하고,<br />
                 화면의 <span className={styles.highlight}>상태를 설계합니다.</span>
-            </h2>
+            </h1>
 
             <p className={styles.description}>
                 TypeScript와 React/Next.js를 기반으로 웹 UI를 구현합니다.<br />

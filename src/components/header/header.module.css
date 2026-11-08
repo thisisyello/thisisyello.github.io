@@ -1,0 +1,130 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    height: var(--header-height);
+    border-bottom: 1px solid #e4e3da;
+    background: var(--background);
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    width: min(1080px, calc(100% - 88px));
+    height: 100%;
+    margin: 0 auto;
+}
+
+.identity {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 18px;
+    white-space: nowrap;
+}
+
+.name {
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+.role {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav a {
+    position: relative;
+    display: block;
+    padding: 16px 2px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color 180ms ease;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    right: 2px;
+    bottom: 5px;
+    left: 2px;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transition: transform 180ms ease;
+}
+
+.nav a:hover,
+.nav a[aria-current] {
+    color: var(--foreground);
+}
+
+.nav a[aria-current]::after {
+    transform: scaleX(1);
+}
+
+.github {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 0 10px 8px;
+    font-size: 12px;
+}
+
+.github:hover {
+    color: #8b701b;
+}
+
+@media (max-width: 900px) {
+    .role {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .inner {
+        gap: 12px;
+        width: calc(100% - 40px);
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    .nav ul {
+        gap: 16px;
+    }
+
+    .nav a {
+        font-size: 11px;
+    }
+
+    .github {
+        padding: 8px;
+    }
+
+    .github > span {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nav a,
+    .nav a::after {
+        transition: none;
+    }
+}

@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaGithub } from "react-icons/fa";
-import styles from "./sidebar.module.css";
+import styles from "./header.module.css";
 
 const navigation = [
   { id: "about", label: "소개" },
@@ -10,7 +10,8 @@ const navigation = [
   { id: "contact", label: "연락" },
 ];
 
-export default function Sidebar() {
+export default function Header() {
+  const headerRef = useRef<HTMLElement>(null);
   const [activeId, setActiveId] = useState("about");
 
   useEffect(() => {
@@ -23,7 +24,7 @@ export default function Sidebar() {
       frameId = null;
       if (sections.length === 0) return;
 
-      const readingLine = Math.min(160, window.innerHeight * 0.25);
+      const readingLine = (headerRef.current?.getBoundingClientRect().bottom ?? 0) + 32;
       let currentId = sections[0].id;
 
       for (const section of sections) {
@@ -60,51 +61,39 @@ export default function Sidebar() {
   }, []);
 
   return (
-    <aside className={styles.sidebar}>
-      <a className={styles.identity} href="#about" aria-label="Yello 소개">
-        <h1 className={styles.name}>
-          yello
-          <span>사용자의 흐름을 화면으로 구현하는 사람</span>
-        </h1>
-      </a>
+    <header className={styles.header} ref={headerRef}>
+      <div className={styles.inner}>
+        <a className={styles.identity} href="#about" aria-label="yello 소개">
+          <span className={styles.name}>yello</span>
+          <span className={styles.role}>Frontend Dev &amp; Web Publisher</span>
+        </a>
 
-      <p className={styles.role}>
-        Frontend Dev
-        <br />
-        & Web Publisher
-      </p>
+        <nav className={styles.nav} aria-label="포트폴리오 목차">
+          <ul>
+            {navigation.map((item) => (
+              <li key={item.id}>
+                <a
+                  href={`#${item.id}`}
+                  aria-current={item.id === activeId ? "location" : undefined}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-      <nav className={styles.nav} aria-label="포트폴리오 목차">
-        <ol>
-          {navigation.map((item, index) => (
-            <li key={item.id}>
-              <a
-                href={`#${item.id}`}
-                aria-current={item.id === activeId ? "location" : undefined}
-              >
-                <span className={styles.number}>0{index + 1}</span>
-                <span>{item.label}</span>
-                {item.id === activeId && (
-                  <span className={styles.dot} aria-hidden="true" />
-                )}
-              </a>
-            </li>
-          ))}
-        </ol>
-      </nav>
-
-      <footer className={styles.footer}>
         <a
+          className={styles.github}
           href="https://github.com/thisisyello"
           target="_blank"
           rel="noreferrer"
+          aria-label="GitHub (새 탭에서 열기)"
         >
-          <FaGithub size={15} aria-hidden="true" focusable="false" />
-          GitHub
-          <span className="sr-only"> (새 탭에서 열기)</span>
+          <FaGithub size={18} aria-hidden="true" focusable="false" />
+          <span>GitHub</span>
         </a>
-        <small>© {new Date().getFullYear()} yello</small>
-      </footer>
-    </aside>
+      </div>
+    </header>
   );
 }
