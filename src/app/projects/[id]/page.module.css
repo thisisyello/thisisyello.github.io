@@ -1,6 +1,11 @@
+.layout {
+    display: flex;
+    justify-content: center;
+}
+
 .document {
+    width: 100%;
     max-width: 820px;
-    margin: 0 auto;
     padding: 64px 36px 48px;
 }
 
